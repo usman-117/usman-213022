@@ -1,0 +1,299 @@
+Muhammad Usman Ali
+213022
+                  Lab - 06
+
+  Example: 01
+
+using System;
+using System.Windows.Forms;
+namespace Forms
+{
+    class Forms
+    {
+        public partial class YourForm : Forms
+        {
+           
+        }
+        static void Main(string[] args)
+        {
+
+            List<int> list = new List<int>();
+            list.Add(10);
+            list.Add(20);
+            list.Add(30);
+            list.Add(40);
+
+            List<string> list2 = new List<string>();
+            list2.Add("One");
+            list2.Add("Two");
+            list2.Add("Three");
+            list2.Add("Four");
+            list2.Add("Four");
+            list2.Add(null);
+            list2.Add(null);
+           
+             IList<int> list3 = list.ToList();
+
+        }
+
+    }    
+}
+
+       Example: 02
+
+using System;
+using System.Windows.Forms;
+
+namespace Forms
+{
+    class Forms
+    {
+        static void Main(string[] args)
+        {
+
+            List<int> list = new List<int>();
+            list.Add(10);
+            list.Add(20);
+            list.Add(30);
+            list.Add(40);
+
+            List<string> list2 = new List<string>();
+
+            list2.AddRange((IEnumerable<string>)list);
+
+        }
+    }
+   
+}
+
+      Example: 03
+
+using System;
+using System.Windows.Forms;
+
+namespace Forms
+{
+    class Forms
+    {
+        static void Main(string[] args)
+        {
+
+            List<int> list = new List<int>();
+            list.Add(10);
+            list.Add(20);
+            list.Add(30);
+            list.Add(40);
+
+            List<string> list2 = new List<string>();
+
+            foreach (int i in list) 
+                Console.WriteLine(i);
+
+        }
+    }
+   
+}
+
+       Example: 04
+using System;
+//using System.Windows.Forms;
+
+namespace Forms
+{
+    static void Print(IList<string> list)
+    {
+        Console.WriteLine("Count [0]", list.Count);
+        foreach(string val  in list)
+        {
+            Console.WriteLine(val);
+        }
+    }
+    class Forms
+    {
+        static void Main(string[] args)
+        {
+            string[] strarray = new string[2];
+            strarray[0] = "Hello";
+            strarray[1] = "World";
+            Print(strarray);
+
+            List<string> list = new List<string>();
+            list.Add("Hello");
+            list.Add("World");
+            Print(list);
+
+              
+        }
+    }
+   
+}
+
+    Example: 05
+
+using System;
+using System.Windows.Forms;
+
+namespace Forms
+{
+    class Forms
+    {
+        static void Main(string[] args)
+        {
+
+            List<int> list = new List<int>();
+            list.Add(10);
+            list.Add(20);
+            list.Add(30);
+            list.Add(40);
+
+            list.Remove(0);
+
+        }
+    }
+   
+}
+
+     Example: 06
+
+using System;
+using System.Windows.Forms;
+
+namespace Forms
+{
+    class Forms
+    {
+        static bool isPositive(int i)
+        {
+            return i > 0;
+        }
+        static void Main(string[] args)
+        {
+
+            List<int> list = new List<int>() { 10, 20, 30, 40};
+
+            bool res = list.TrueForAll(isPositive);
+           
+
+        }
+    }
+   
+}
+
+     Example: 07
+
+using System;
+using System.Collections;
+using System.Windows.Forms;
+
+namespace Forms
+{
+    class Forms
+    {
+       
+        static void Main(string[] args)
+        {
+            ArrayList arraylist = new ArrayList();
+
+            arraylist.Add(1);
+            arraylist.Add(2);
+            arraylist.Add(4.5);
+
+            IList arraylist2 = new ArrayList()
+            {
+                100, 200
+            };
+        }
+    }
+   
+}
+
+     Example: 08
+
+using System;
+using System.Collections;
+using System.Windows.Forms;
+
+namespace Forms
+{
+    class Forms
+    {
+       
+        static void Main(string[] args)
+        {
+            ArrayList arraylist = new ArrayList();
+
+            arraylist.Add(1);
+            arraylist.Add("Two");
+            arraylist.Add(4.5);
+
+            int FirstElement = (int)arraylist[0];
+            string SecondElement = (string)arraylist[1];
+            float ThirdElement = (float)arraylist[2];
+
+            var FirstElement = arraylist[0];
+        }
+    }
+   
+}
+
+     Example: 09
+
+using System;
+using System.Collections;
+using System.Windows.Forms;
+
+namespace Forms
+{
+    class Forms
+    {
+       
+        static void Main(string[] args)
+        {
+            ArrayList arraylist = new ArrayList();
+
+            arraylist.Add(1);
+            arraylist.Add("Two");
+            arraylist.Add(4.5);
+
+            arraylist.Insert(1, "Second Item");
+
+            foreach (var i in arraylist)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+   
+}
+
+         Example: 10
+
+using System;
+using System.Collections;
+using System.Windows.Forms;
+
+namespace Forms
+{
+    class Forms
+    {
+       
+        static void Main(string[] args)
+        {
+            ArrayList arraylist = new ArrayList();
+
+            arraylist.Add(1000);
+            arraylist.Add(2000);
+            arraylist.Add(5000);
+
+           arraylist.Remove(1000);
+
+            foreach (var item in arraylist)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+   
+}
+
+
